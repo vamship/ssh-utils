@@ -1,0 +1,49 @@
+{
+  "name": "@vamship/ssh-utils",
+  "version": "1.0.0",
+  "description": "Library that defines custom error types",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "grunt test:unit"
+  },
+  "keywords": [],
+  "author": "Vamshi K Ponnapalli <vamshi.ponnapalli@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@vamship/grunt-utils": "^1.1.1",
+    "@vamship/test-utils": "^2.1.1",
+    "chai": "^4.1.2",
+    "chai-as-promised": "^7.1.1",
+    "docdash": "^1.0.0",
+    "grunt": "^1.0.3",
+    "grunt-bump": "^0.8.0",
+    "grunt-contrib-clean": "^2.0.0",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-eslint": "^21.0.0",
+    "grunt-jsdoc": "^2.3.0",
+    "grunt-mocha-istanbul": "^5.0.2",
+    "grunt-prettier": "^1.1.0",
+    "istanbul": "^0.4.5",
+    "load-grunt-tasks": "^4.0.0",
+    "mocha": "^5.2.0",
+    "rewire": "^4.0.1",
+    "sinon": "^6.3.4",
+    "sinon-chai": "^3.2.0",
+    "time-grunt": "^1.4.0"
+  },
+  "dependencies": {
+    "@vamship/arg-utils": "^2.1.1",
+    "@vamship/error-types": "^1.4.1",
+    "@vamship/logger": "^2.0.1",
+    "bluebird": "^3.5.2",
+    "ssh2": "^0.6.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vamship/ssh-utils.git"
+  },
+  "bugs": {
+    "url": "https://github.com/vamship/ssh-utils/issues"
+  },
+  "homepage": "https://github.com/vamship/ssh-utils#readme"
+}

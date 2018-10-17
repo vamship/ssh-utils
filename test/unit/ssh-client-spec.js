@@ -48,12 +48,9 @@ describe('SshClient', () => {
         _superSpy = new SuperSpyBuilder(RemoteClient, SshClient);
         _superSpy.inject();
 
-        const stderr = new ObjectMock().addMock(
-            'on',
-            (event, callback) => {
-                return addHandler('stderr', callback);
-            }
-        );
+        const stderr = new ObjectMock().addMock('on', (event, callback) => {
+            return addHandler('stderr', callback);
+        });
         _streamMock = new ObjectMock().addMock('on', (event, callback) => {
             return addHandler(event, callback);
         });

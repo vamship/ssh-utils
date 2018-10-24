@@ -100,8 +100,9 @@ class SshClient extends RemoteClient {
                         .on('close', (code, signal) => {
                             result.exitCode = code;
                             if (code !== 0) {
-                                const err =
-                                    'Program exited with non zero exit code';
+                                const err = new Error(
+                                    'Program exited with non zero exit code'
+                                );
                                 result.error = err;
                                 result.success = false;
                                 reject(err);

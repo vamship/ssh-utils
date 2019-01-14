@@ -1,6 +1,6 @@
 {
   "name": "@vamship/ssh-utils",
-  "version": "1.2.0-0",
+  "version": "1.2.0",
   "description": "Library that defines custom error types",
   "main": "src/index.js",
   "scripts": {

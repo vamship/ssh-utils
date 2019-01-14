@@ -10,11 +10,11 @@
   "author": "Vamshi K Ponnapalli <vamshi.ponnapalli@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "@vamship/grunt-utils": "^1.1.1",
-    "@vamship/test-utils": "^2.1.1",
-    "chai": "^4.1.2",
+    "@vamship/grunt-utils": "^1.2.0",
+    "@vamship/test-utils": "^2.2.0-0",
+    "chai": "^4.2.0",
     "chai-as-promised": "^7.1.1",
-    "docdash": "^1.0.0",
+    "docdash": "^1.0.2",
     "grunt": "^1.0.3",
     "grunt-bump": "^0.8.0",
     "grunt-contrib-clean": "^2.0.0",
@@ -27,16 +27,16 @@
     "load-grunt-tasks": "^4.0.0",
     "mocha": "^5.2.0",
     "rewire": "^4.0.1",
-    "sinon": "^6.3.4",
-    "sinon-chai": "^3.2.0",
-    "time-grunt": "^1.4.0"
+    "sinon": "^7.2.2",
+    "sinon-chai": "^3.3.0",
+    "time-grunt": "^2.0.0"
   },
   "dependencies": {
-    "@vamship/arg-utils": "^2.1.1",
-    "@vamship/error-types": "^1.4.1",
-    "@vamship/logger": "^2.0.1",
-    "bluebird": "^3.5.2",
-    "ssh2": "^0.6.1"
+    "@vamship/arg-utils": "^2.2.0-1",
+    "@vamship/error-types": "^1.5.0-0",
+    "@vamship/logger": "^4.0.0-1",
+    "bluebird": "^3.5.3",
+    "ssh2": "^0.8.0"
   },
   "repository": {
     "type": "git",

@@ -28,8 +28,7 @@
     "mocha": "^5.2.0",
     "rewire": "^4.0.1",
     "sinon": "^7.2.2",
-    "sinon-chai": "^3.3.0",
-    "time-grunt": "^2.0.0"
+    "sinon-chai": "^3.3.0"
   },
   "dependencies": {
     "@vamship/arg-utils": "^2.2.0-1",

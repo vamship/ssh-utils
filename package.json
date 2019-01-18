@@ -11,7 +11,7 @@
   "license": "MIT",
   "devDependencies": {
     "@vamship/grunt-utils": "^1.2.0",
-    "@vamship/test-utils": "^2.2.0-0",
+    "@vamship/test-utils": "^2.2.0",
     "chai": "^4.2.0",
     "chai-as-promised": "^7.1.1",
     "docdash": "^1.0.2",
@@ -31,11 +31,11 @@
     "sinon-chai": "^3.3.0"
   },
   "dependencies": {
-    "@vamship/arg-utils": "^2.2.0-1",
-    "@vamship/error-types": "^1.5.0-0",
-    "@vamship/logger": "^4.0.0-1",
+    "@vamship/arg-utils": "^2.2.0",
+    "@vamship/error-types": "^1.5.0",
+    "@vamship/logger": "^4.0.0",
     "bluebird": "^3.5.3",
-    "ssh2": "^0.8.0"
+    "ssh2": "^0.8.2"
   },
   "repository": {
     "type": "git",

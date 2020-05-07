@@ -9,12 +9,12 @@ const _rewire = require('rewire');
 const SshClient = require('../../src/ssh-client');
 let _index = null;
 
-describe('_index', function() {
+describe('_index', function () {
     beforeEach(() => {
         _index = _rewire('../../src/index');
     });
 
-    it('should implement methods required by the interface', function() {
+    it('should implement methods required by the interface', function () {
         //TODO: Tests need cleanup.
         expect(_index).to.be.an('object');
         expect(_index.SshClient).to.equal(SshClient);

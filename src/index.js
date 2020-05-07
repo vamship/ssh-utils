@@ -8,5 +8,5 @@ module.exports = {
     /**
      * Client object that allows execution of remote commands over ssh.
      */
-    SshClient: require('./ssh-client')
+    SshClient: require('./ssh-client'),
 };

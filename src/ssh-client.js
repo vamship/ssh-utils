@@ -85,7 +85,7 @@ class SshClient extends RemoteClient {
                         command,
                         success: true,
                         stdout: '',
-                        stderr: ''
+                        stderr: '',
                     };
                     results.push(result);
 
@@ -164,7 +164,7 @@ class SshClient extends RemoteClient {
             commandCount: commands.length,
             successCount: 0,
             failureCount: 0,
-            results: []
+            results: [],
         };
         return this.getConnectionOptions().then((connOpts) => {
             return new Promise((resolve, reject) => {
@@ -173,7 +173,7 @@ class SshClient extends RemoteClient {
                     .on('ready', () => {
                         this.logger.trace('Connected to remote host', {
                             host: this._host,
-                            username: this._username
+                            username: this._username,
                         });
 
                         this._runCommandSet(client, commands)

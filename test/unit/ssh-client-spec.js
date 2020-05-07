@@ -12,7 +12,7 @@ const {
     testValues: _testValues,
     asyncHelper: _asyncHelper,
     SuperSpyBuilder,
-    ObjectMock
+    ObjectMock,
 } = require('@vamship/test-utils');
 
 const { ArgError } = require('@vamship/error-types').args;
@@ -25,7 +25,7 @@ describe('SshClient', () => {
             host: _testValues.getString('host'),
             port: _testValues.getNumber(1024, 22),
             username: _testValues.getString('username'),
-            password: _testValues.getString('password')
+            password: _testValues.getString('password'),
         };
         return options;
     }
@@ -35,7 +35,7 @@ describe('SshClient', () => {
             host: _testValues.getString('host'),
             port: _testValues.getNumber(1024, 22),
             username: _testValues.getString('username'),
-            password: _testValues.getString('password')
+            password: _testValues.getString('password'),
         };
         return new SshClient(options);
     }
@@ -81,7 +81,7 @@ describe('SshClient', () => {
         _sshClientMock.__execResult = true;
 
         SshClient.__set__('_ssh2', {
-            Client: _sshClientMock.ctor
+            Client: _sshClientMock.ctor,
         });
     });
 
@@ -235,7 +235,7 @@ describe('SshClient', () => {
             const commands = [
                 _testValues.getString('command'),
                 _testValues.getString('command'),
-                _testValues.getString('command')
+                _testValues.getString('command'),
             ];
 
             expect(_sshClientMock.__handlers.continue).to.be.undefined;
@@ -271,7 +271,7 @@ describe('SshClient', () => {
             const commands = [
                 _testValues.getString('command'),
                 _testValues.getString('command'),
-                _testValues.getString('command')
+                _testValues.getString('command'),
             ];
 
             expect(_sshClientMock.__handlers.continue).to.be.undefined;
@@ -311,7 +311,7 @@ describe('SshClient', () => {
             const commands = [
                 _testValues.getString('command'),
                 _testValues.getString('command'),
-                _testValues.getString('command')
+                _testValues.getString('command'),
             ];
 
             // Client asks for wait before continuing
@@ -377,7 +377,7 @@ describe('SshClient', () => {
             const commands = [
                 _testValues.getString('command'),
                 _testValues.getString('command'),
-                _testValues.getString('command')
+                _testValues.getString('command'),
             ];
 
             expect(endMethod.stub).to.not.have.been.calledOnce;
@@ -424,7 +424,7 @@ describe('SshClient', () => {
                 _testValues.getString('command'),
                 _testValues.getString('command'),
                 _testValues.getString('command'),
-                _testValues.getString('command')
+                _testValues.getString('command'),
             ];
             const successCount = _testValues.getNumber(commands.length - 1);
             expect(endMethod.stub).to.not.have.been.calledOnce;
@@ -475,7 +475,7 @@ describe('SshClient', () => {
                 _testValues.getString('command'),
                 _testValues.getString('command'),
                 _testValues.getString('command'),
-                _testValues.getString('command')
+                _testValues.getString('command'),
             ];
             const successCount = _testValues.getNumber(commands.length - 1);
             const exitCode = _testValues.getNumber(-10, -1);
@@ -527,17 +527,17 @@ describe('SshClient', () => {
             const commands = [
                 _testValues.getString('command'),
                 _testValues.getString('command'),
-                _testValues.getString('command')
+                _testValues.getString('command'),
             ];
             const stdoutResponses = [
                 _testValues.getString('stdout'),
                 _testValues.getString('stdout'),
-                _testValues.getString('stdout')
+                _testValues.getString('stdout'),
             ];
             const stderrResponses = [
                 _testValues.getString('stderr'),
                 _testValues.getString('stderr'),
-                _testValues.getString('stderr')
+                _testValues.getString('stderr'),
             ];
 
             const response = client.run(commands);

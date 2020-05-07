@@ -19,7 +19,7 @@ const LOG_METHODS = [
     'info',
     'warn',
     'error',
-    'child'
+    'child',
 ];
 
 describe('RemoteClient', () => {
@@ -28,7 +28,7 @@ describe('RemoteClient', () => {
             host: _testValues.getString('host'),
             port: _testValues.getNumber(22, 100),
             username: _testValues.getString('username'),
-            password: _testValues.getString('password')
+            password: _testValues.getString('password'),
         };
 
         return new RemoteClient(options);
@@ -63,7 +63,7 @@ describe('RemoteClient', () => {
             inputs.forEach((host) => {
                 const wrapper = () => {
                     const options = {
-                        host
+                        host,
                     };
                     return new RemoteClient(options);
                 };
@@ -80,7 +80,7 @@ describe('RemoteClient', () => {
                 const wrapper = () => {
                     const options = {
                         host: _testValues.getString('host'),
-                        username
+                        username,
                     };
                     return new RemoteClient(options);
                 };
@@ -100,7 +100,7 @@ describe('RemoteClient', () => {
                         host: _testValues.getString('host'),
                         username: _testValues.getString('username'),
                         password: value,
-                        privateKey: value
+                        privateKey: value,
                     };
                     return new RemoteClient(options);
                 };
@@ -118,7 +118,7 @@ describe('RemoteClient', () => {
                         host: _testValues.getString('host'),
                         username: _testValues.getString('username'),
                         password: _testValues.getString('password'),
-                        privateKey: value
+                        privateKey: value,
                     };
                     return new RemoteClient(options);
                 };
@@ -136,7 +136,7 @@ describe('RemoteClient', () => {
                         host: _testValues.getString('host'),
                         username: _testValues.getString('username'),
                         password: value,
-                        privateKey: _testValues.getString('privateKey')
+                        privateKey: _testValues.getString('privateKey'),
                     };
                     return new RemoteClient(options);
                 };
@@ -151,7 +151,7 @@ describe('RemoteClient', () => {
                     host: _testValues.getString('host'),
                     username: _testValues.getString('username'),
                     password: _testValues.getString('password'),
-                    privateKey: _testValues.getString('privateKey')
+                    privateKey: _testValues.getString('privateKey'),
                 };
                 return new RemoteClient(options);
             };
@@ -164,7 +164,7 @@ describe('RemoteClient', () => {
                 host: _testValues.getString('host'),
                 username: _testValues.getString('username'),
                 password: _testValues.getString('password'),
-                privateKey: _testValues.getString('privateKey')
+                privateKey: _testValues.getString('privateKey'),
             };
             const client = new RemoteClient(options);
             expect(client.logger).to.be.an('object');
@@ -189,7 +189,7 @@ describe('RemoteClient', () => {
                 host: _testValues.getString('host'),
                 port: _testValues.getNumber(1024, 22),
                 username: _testValues.getString('username'),
-                password: _testValues.getString('password')
+                password: _testValues.getString('password'),
             };
             const client = _createRemoteClient(options);
             const ret = client.getConnectionOptions();
@@ -209,7 +209,7 @@ describe('RemoteClient', () => {
                         host: _testValues.getString('host'),
                         username: _testValues.getString('username'),
                         password: _testValues.getString('password'),
-                        port
+                        port,
                     };
                     const client = _createRemoteClient(options);
                     return client.getConnectionOptions().then((conn) => {
@@ -228,7 +228,7 @@ describe('RemoteClient', () => {
                         host: _testValues.getString('host'),
                         username: _testValues.getString('username'),
                         password: _testValues.getString('password'),
-                        privateKey
+                        privateKey,
                     };
                     const readFileMethod = _fsMock.mocks.readFile;
 
@@ -249,7 +249,7 @@ describe('RemoteClient', () => {
             const options = {
                 host: _testValues.getString('host'),
                 username: _testValues.getString('username'),
-                privateKey: _testValues.getString('privateKey')
+                privateKey: _testValues.getString('privateKey'),
             };
             const error = 'something went wrong!';
             const readFileMethod = _fsMock.mocks.readFile;
@@ -269,7 +269,7 @@ describe('RemoteClient', () => {
             const options = {
                 host: _testValues.getString('host'),
                 username: _testValues.getString('username'),
-                privateKey: _testValues.getString('privateKey')
+                privateKey: _testValues.getString('privateKey'),
             };
             const privateKeyData = _testValues.getString('privateKeyData');
             const readFileMethod = _fsMock.mocks.readFile;
@@ -294,7 +294,7 @@ describe('RemoteClient', () => {
             const options = {
                 host: _testValues.getString('host'),
                 username: _testValues.getString('username'),
-                privateKey: _testValues.getString('privateKey')
+                privateKey: _testValues.getString('privateKey'),
             };
             const privateKeyData = _testValues.getString('privateKeyData');
             const readFileMethod = _fsMock.mocks.readFile;
@@ -313,7 +313,7 @@ describe('RemoteClient', () => {
                     return Promise.all([
                         client.getConnectionOptions(),
                         client.getConnectionOptions(),
-                        client.getConnectionOptions()
+                        client.getConnectionOptions(),
                     ]);
                 })
                 .then(() => {
@@ -329,7 +329,7 @@ describe('RemoteClient', () => {
             const options = {
                 host: _testValues.getString('host'),
                 username: _testValues.getString('username'),
-                privateKey: _testValues.getString('privateKey')
+                privateKey: _testValues.getString('privateKey'),
             };
             const privateKeyData = _testValues.getString('privateKeyData');
             const readFileMethod = _fsMock.mocks.readFile;
@@ -355,7 +355,7 @@ describe('RemoteClient', () => {
                 host: _testValues.getString('host'),
                 username: _testValues.getString('username'),
                 privateKey: _testValues.getString('privateKey'),
-                password: _testValues.getString('password')
+                password: _testValues.getString('password'),
             };
             const privateKeyData = _testValues.getString('privateKeyData');
             const readFileMethod = _fsMock.mocks.readFile;

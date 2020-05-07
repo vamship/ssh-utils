@@ -106,7 +106,7 @@ class RemoteClient {
         const connectionOptions = {
             host: this._host,
             port: this._port,
-            username: this._username
+            username: this._username,
         };
         return Promise.try(() => {
             if (!this._privateKey) {

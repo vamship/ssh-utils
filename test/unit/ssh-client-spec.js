@@ -219,6 +219,7 @@ describe('SshClient', () => {
                     const readyHandler = _sshClientMock.__handlers.ready;
                     readyHandler();
                 })
+                .then(_asyncHelper.wait(10))
                 .then(() => {
                     const callback = execMethod.stub.args[0][1];
                     callback(null, _streamMock.instance);
@@ -345,7 +346,7 @@ describe('SshClient', () => {
                 });
         });
 
-        it('should accept a string command instead of an array', () => {
+        it.only('should accept a string command instead of an array', () => {
             const client = _createSshClient();
             const execMethod = _sshClientMock.mocks.exec;
             const commands = _testValues.getString('command');
@@ -359,6 +360,7 @@ describe('SshClient', () => {
                     const readyHandler = _sshClientMock.__handlers.ready;
                     readyHandler();
                 })
+                .then(_asyncHelper.wait(10))
                 .then(() => {
                     expect(execMethod.stub).to.have.been.calledOnce;
                     expect(execMethod.stub.args[0][0]).to.equal(commands);

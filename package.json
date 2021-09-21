@@ -35,7 +35,7 @@
         "@vamship/arg-utils": "^2.4.13",
         "@vamship/error-types": "^1.7.13",
         "bluebird": "^3.7.2",
-        "ssh2": "^0.8.9"
+        "ssh2": "^1.4.0"
     },
     "peerDependencies": {
         "@vamship/logger": "^4.3.5"
